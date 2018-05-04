@@ -1,0 +1,1 @@
+no analisador lexico tem que terminar a parte de ler numeros naturais, ou seja, passar a string pro parser, isso tem problemas pq o tipo token é só um char e nao uma string
