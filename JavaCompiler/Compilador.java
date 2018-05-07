@@ -11,14 +11,19 @@ class Compilador{
 		
 			arv = as.parseProg();
 		
-			
-			//CodeGen backend = new CodeGen();
+			//JUST GENERATE CODE AND PRINTS
+			CodeGen backend = new CodeGen();
+			String codigo = backend.geraCodigo(arv);
+			System.out.println(codigo);
+			//EXEC CODE
+			StackMachine sm =  new StackMachine();
+			sm.Exec(codigo);
 
-			Interpretador backend = new Interpretador();
 
-			int result = backend.Interpreta(arv);
-			//String codigo = backend.geraCodigo(arv);
-			System.out.println(result);
+			//INTERPRETER
+			//Interpretador backend = new Interpretador();
+			//int result = backend.Interpreta(arv);
+			//System.out.println(result);
 
 		}catch(Exception e)
 		{			

@@ -64,7 +64,7 @@ class AnaliseLexica {
 					{
 						natural = natural + currchar;
 						
-						System.out.println("natural " + natural);
+						//System.out.println("natural " + natural);
 						currchar1 =  arquivo.read();
 						currchar = (char) currchar1;
 	
@@ -91,22 +91,22 @@ class AnaliseLexica {
 
 					switch (currchar){
 						case '(':
-							System.out.println(currchar);
+							//System.out.println(currchar);
 							return (new Token (currchar,TokenType.APar));
 						case ')':
-							System.out.println(currchar);
+							//System.out.println(currchar);
 							return (new Token (currchar,TokenType.FPar));
 						case '+':
-							System.out.println(currchar);
+							//System.out.println(currchar);
 							return (new Token (currchar,TokenType.SOMA));
 						case '*':
-							System.out.println(currchar);
+							//System.out.println(currchar);
 							return (new Token (currchar,TokenType.MULT));
 						case '-':
-							System.out.println(currchar);
+							//System.out.println(currchar);
 							return (new Token (currchar, TokenType.SUB));
 						case '%':
-							System.out.println(currchar);
+							//System.out.println(currchar);
 							return (new Token (currchar, TokenType.DIV));
 						
 						default: throw (new Exception("Caractere inválido: " + ((int) currchar)));
